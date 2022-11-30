@@ -67,11 +67,12 @@ class Company:
 
 if __name__ == '__main__':
     company = Company([
-        Employee("a", "a", Sex.MALE, Department.UNDEFINED),
-        HeadOfGroup("a", "a", Sex.MALE, Department.MARKETING),
-        HeadOfGroup("a", "b", Sex.MALE, Department.MARKETING)
+        Employee("Thomas", "Kefer", Sex.MALE, Department.UNDEFINED),
+        HeadOfGroup("Tobias", "Laser", Sex.MALE, Department.MARKETING),
+        HeadOfGroup("Michael", "Perktold", Sex.MALE, Department.MARKETING)
     ])
     print(company.count_employees_via_type(Employee))
+    print(company.count_employees_via_type(HeadOfGroup))
     print(company.count_departments())
     print(company.get_biggest_department())
     print(company.get_sex_ration())
